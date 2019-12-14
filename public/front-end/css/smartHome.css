@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #DDD;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+#login-box {
+  position: absolute;
+  right: 0%;
+  width: 40%;
+  height: 100%;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.background-box {
+    position: absolute;
+   
+    width: 60%;
+    height: 100%;
+    background-image: url("/front-end/images/home.jpg");
+    background-color: black;
+    background-size: cover;
+  }
+
+.loginButton {
+ position: absolute;
+ right: 20%;
+ width: 65%;
+ height: 6%;
+ border-radius:2em;
+ bottom: 20%;
+ color:white;
+ background-color: teal;
+}
+
+.registerButton {
+    position: absolute;
+    right: 20%;
+    width: 65%;
+    height: 6%;
+    bottom: 27%;
+    border-radius:2em;
+    color:white;
+    background-color: teal;
+}
+.boxText {
+    position: absolute;
+    text-align: center; 
+    bottom: 60%;
+    font-size: 30px;
+}

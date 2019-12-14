@@ -1,0 +1,73 @@
+ {% block body %}
+ <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ asset('front-end/css/menu.css') }}">
+    <title>Smart Home Rooms</title>
+    <link rel="icon" href="{{ asset('front-end/images/Web-sign.png') }}" type="image/gif" sizes="16x16">
+</head>
+ <nav>
+    <ul class="nav">
+        <li ><a href="">User</a></li>
+        <li><a href="/menu">Home</a></li>
+        <li><a href="" class="floatleft">Child mode</a></li>
+        <li><a href="" class="floatleft">Edit profile</a></li>
+        <li><a href="{{ path('app_logout') }}">Logout</a></li>
+      </ul>
+      </nav>
+
+<section class="block">
+        {% if app.user %}
+        <h2><div class="mb-3">
+            <p>WELCOME HOME {{ app.user.username }}</p>
+        </div></h2><br>
+    {% endif %}
+        <div class="row">
+            <div class="column">
+                  <a href="{{ path('gadget') }}">
+                <input type="image" src="{{ asset('front-end/images/Bedroom.png') }}" 
+                alt="Image cannot be uploaded"/>
+                </a>
+                <div class="textallign">BEDROOM</div>
+            </div>
+
+            <div class="column">
+                <a href="{{ path('gadget') }}">
+                <input type="image" src="{{ asset('front-end/images/Bathroom.png') }}">
+                </a>
+                <div class="textallign">BATHROOM</div>
+            </div>
+
+            <div class="column">
+             <a href="{{ path('gadget') }}">
+                <input type="image" src="{{ asset('front-end/images/Living-room.png') }}" 
+                alt="Image cannot be uploaded"/>
+                </a>
+                <div class="textallign">LIVING ROOM</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+              <a href="{{ path('gadget') }}">
+                <input type="image" src="{{ asset('front-end/images/Kitchen.png') }}"
+                alt="Image cannot be uploaded"/>
+                </a>
+                <div class="textallign">KITCHEN</div>
+            </div>
+
+            <div class="column">
+               <a href="{{ path('gadget') }}">
+                <input type="image" src="{{ asset('front-end/images/Working-Room.png') }}"
+                alt="Image cannot be uploaded"/>
+                </a>
+                <div class="textallign">WORKING-ROOM</div>
+            </div>
+            <div class="column"> 
+                <a href="{{ path('gadget') }}">
+                <input type="image" src=""
+                alt="Image cannot be uploaded"/>
+                </a>
+            </div>
+        </div>
+      </section>
+ {% endblock %}

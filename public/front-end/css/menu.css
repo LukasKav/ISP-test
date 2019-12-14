@@ -1,0 +1,97 @@
+html{
+    width: 100%;
+
+}
+
+body {
+  margin: 0em;
+}
+
+p {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  text-align: center;
+}
+
+.nav {
+  background: #ffc34d;
+  background: -webkit-linear-gradient(to top, #ffc34d, #ffc34d);
+  background: -moz-linear-gradient(to top, #ffc34d, #ffc34d);
+  background: -o-linear-gradient(to top, #ffc34d, #ffc34d);
+  background: linear-gradient(to top, #ffc34d, #226D2C);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    color: white;
+    display: inline-block;
+    font-size: 22px;
+     padding: 25px; 
+
+
+  }
+
+  .nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+.block{
+    padding-top: 2em;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+  }
+
+  .column {
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+
+  input{
+      padding:6em;
+      border-radius: 1em;
+      border:none;
+      text-decoration: none;
+      background-attachment: fixed;
+      margin: 2em;
+      width:70%;
+      padding: 0;
+      height: 50%; 
+      opacity: 1;
+      transition: 0.2s;   
+  }
+
+
+  .textallign{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  input:hover{
+    opacity: 0.8;
+    width:80%;
+    height: 60%; 
+  }
+  
+
+
+

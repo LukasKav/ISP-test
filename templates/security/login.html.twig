@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="front-end/css/login.css" rel="stylesheet" type="text/css" media="all" />
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+	<div class="main-w3layouts wrapper">
+		<h1>Smart Home Login FORM</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+
+{% block body %}
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>   <br> <br>
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+    <input type="hidden" name="_csrf_token"
+           value="{{ csrf_token('authenticate') }}"
+    >
+    <br>
+    <a href="/register">Do not have acc yet? Register!</a><br>
+      <a href="/forgotPass">Forgot password?</a>
+      <input type="submit" value="SIGNUP">
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+</form>
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }} <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+  
+{% endblock %}
+				
+			</div>
+		</div>
+		<div class="colorlibcopy-agile">
+			<p>© 2019 Smart Home </p>
+		</div>
+	</div>
+    <ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</body>
+</html>
